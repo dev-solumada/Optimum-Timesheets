@@ -121,7 +121,7 @@ routeExp.route("/employees").get(async function (req, res) {
   )
   .then(async () => {
       var timesheets = await TimesheetsSchema.find({validation:true});
-      res.render("employees.html",{timesheets:timesheets});
+      res.render("Employees.html",{timesheets:timesheets});
   });
   }
   else{
