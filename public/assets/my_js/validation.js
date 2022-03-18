@@ -9,11 +9,11 @@ var denie ="";
 var mcode = "";
 var task = "";
 //Denied if false
-function validate_false(denied,m_code,task){
+function validate_false(denied,m_code,tasks){
     reason.style.display = "block";
     denie = denied;
     mcode = m_code;
-    task = task;
+    task = tasks;
 }
 function sendclick(){
     sendRequest_false('/denied',denie,mcode,rejected.value,task);
