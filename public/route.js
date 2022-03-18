@@ -231,7 +231,7 @@ routeExp.route("/savetime").post(async function (req, res) {
     )
     .then(async () => {
         await TimesheetsSchema(new_time).save();
-        sendEmail("ricardoramandimbisoa@gmail.com","Time logged",htmlAlert(session.m_code));
+        sendEmail("andy.solumada@gmail.com","Time logged",htmlAlert(session.m_code));
         res.send("Time for task "+task+" saved");
     })
 })
