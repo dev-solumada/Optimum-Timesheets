@@ -296,7 +296,7 @@ routeExp.route("/denied").post(async function (req, res) {
 .then(async () => {
   var user = await UserSchema.findOne({m_code:m_code});
   await TimesheetsSchema.findOneAndDelete({_id:id});
-  var text = "<p>Hello,</p>"+"<p>Your task"+ task + " is rejected because:</p>"+"<p style='margin-left:30px;'>"+message+"<p><p>Regards</p>";
+  var text = "<p>Hello,</p>"+"<p>Your task "+ task + " is rejected because:</p>"+"<p style='margin-left:30px;'>"+message+"<p><p>Regards</p>";
   sendEmail(user.username,"Rejected Time logged",text);
   res.send("Ok");
 })
