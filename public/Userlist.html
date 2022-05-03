@@ -1,0 +1,390 @@
+<!doctype html>
+<html class="fixed">
+	<head>
+
+		<!-- Basic -->
+		<meta charset="UTF-8">
+
+		<title>Timesheets Users List</title>
+		<meta name="keywords" content="HTML5 Admin Template" />
+		<meta name="description" content="Porto Admin - Responsive HTML5 Template">
+		<meta name="author" content="okler.net">
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<!-- Web Fonts  -->
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
+		<link rel="icon" type="image/png" href="assets/images/logo opt.png" />
+
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.css" />
+		<link rel="stylesheet" href="assets/vendor/magnific-popup/magnific-popup.css" />
+		<link rel="stylesheet" href="assets/vendor/bootstrap-datepicker/css/datepicker3.css" />
+
+		<!-- Specific Page Vendor CSS -->
+		<link rel="stylesheet" href="assets/vendor/select2/select2.css" />
+		<link rel="stylesheet" href="assets/vendor/jquery-datatables-bs3/assets/css/datatables.css" />
+
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="assets/stylesheets/theme.css" />
+		<link rel="stylesheet" href="assets/stylesheets/custom.css" />
+
+		<!-- Skin CSS -->
+		<link rel="stylesheet" href="assets/stylesheets/skins/default.css" />
+
+		<!-- Theme Custom CSS -->
+		<link rel="stylesheet" href="assets/stylesheets/custom.css">
+
+		<!-- Head Libs -->
+		<script src="assets/vendor/modernizr/modernizr.js"></script>
+
+	</head>
+	<body>
+		<section class="body">
+
+			<!-- start: header -->
+			<header class="header">
+				<div class="logo-container">
+					<a href="../" class="logo">
+						<img src="assets/images/Logo optimum.png" height="40" alt="Company Logo" />
+					</a>
+					<div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
+						<i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+					</div>
+				</div>
+			
+				<!-- start: search & user box -->
+				<div class="header-right">
+					<div id="userbox" class="userbox">
+						<a href="#" data-toggle="dropdown">
+							<figure class="profile-picture">
+								<img src="assets/images/logo opt.png" alt="Joseph Doe" class="img-circle" data-lock-picture="assets/images/logo opt.png" />
+							</figure>
+							<div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@JSOFT.com">
+								<span class="name">Optimum timesheets</span>
+								<span class="role"><%= admin %></span>
+							</div>
+			
+							<i class="fa custom-caret"></i>
+						</a>
+			
+						<div class="dropdown-menu">
+							<ul class="list-unstyled">
+								<li>
+									<a role="menuitem" tabindex="-1" href="/exit_a"><i class="fa fa-power-off"></i> Logout</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- end: search & user box -->
+			</header>
+			<!-- end: header -->
+
+			<div class="inner-wrapper">
+				<!-- start: sidebar -->
+				<aside id="sidebar-left" class="sidebar-left">
+				
+					<div class="sidebar-header">
+						<div class="sidebar-title" style="color:rgb(221, 216, 216);">
+							Timesheets
+						</div>
+						<div class="sidebar-toggle hidden-xs" data-toggle-class="sidebar-left-collapsed" data-target="html" data-fire-event="sidebar-left-toggle">
+							<i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+						</div>
+					</div>
+				
+					<div class="nano">
+						<div class="nano-content">
+							<nav id="menu" class="nav-main text-bold">
+								<ul class="nav nav-main">		
+									<li class="nav-parent nav-expanded">
+										<a>
+											<i class="fa fa-copy" aria-hidden="true"></i>
+											<span>PAGES</span>
+										</a>
+										<ul class="nav nav-children">
+											<li>
+												<a href="/employees">
+													Timesheets of employees
+												</a>
+											</li>
+											<li >
+												<a href="/validation">
+													Validation Page
+												</a>
+											</li>
+                                            <li class="nav-active">
+												<a href="/userlist">
+													Users Lists
+												</a>
+											</li>
+											<li>
+												<a href="/about">
+													About Project
+												</a>
+											</li>
+											
+										</ul>
+									</li>
+									
+									
+									
+								</ul>
+							</nav>
+						</div>
+				
+					</div>
+				
+				</aside>
+				<!-- end: sidebar -->
+
+				<section role="main" class="content-body">
+					<header class="page-header">
+						<h2>Users List</h2>
+					
+						<div class="right-wrapper pull-right">
+							<ol class="breadcrumbs">
+								<li>
+									<a href="/">
+										<i class="fa fa-home"></i>
+									</a>
+								</li>
+								<li><span>List User</span></li>
+								<li><span>Timesheets</span></li>
+							</ol>
+					
+							<a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fa fa-chevron-left"></i></a>
+						</div>
+					</header>
+
+					<!-- start: page -->
+					<section class="panel">
+						<header class="panel-heading">
+							<h2 class="panel-title text-center">Ttimesheets Users List</h2>
+							<hr>
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="col-md-3" style="margin-bottom: 10px;">
+										<a href="/newemployee"><button class="btn btn-primary btn-sm "><i class="fa fa-plus"></i>   NEW EMPLOYE</button></a>
+										
+									</div>
+									<div class="col-md-3">
+										<a class="modal-with-form" href="#modalForms"><button class="btn btn-primary btn-sm pull-left "><i class="fa fa-plus"></i> NEW ADMIN</button></a>
+									</div>
+									<div id="notif" class="col-sm-6 notification">
+										
+									</div>
+									</div>
+								</div>
+                            
+						</header>
+						
+                        <br>
+                        
+						<div class="panel-body">
+							<table class="table table-bordered table-striped mb-none" id="datatable-default" >
+								<thead style="background-color: #619FCB;color:white">
+									<tr>
+                                        <th>USERNAME</th>
+										<th>NAME</th>
+										<th>M-CODE</th>
+										<th>NUMBER OF AGENT</th>
+										<th>AMOUNT</th>
+										<th>STATUS</th>
+                                        <th>ACTIONS</th>
+									</tr>
+								</thead>
+								<tbody id ="alldata">
+									<% users.forEach(function(user) { %>
+										<% if (user.occupation == "user") { %>
+											<tr id="<%= user._id %>">
+                                                <td align="center"><%= user.username %></td>
+												<td align="center"><%= user.first_name %> <%= user.last_name %></td>
+												<td align="center"><%= user.m_code %></td>
+												<td align="center"><%= user.num_agent %></td>
+												<td align="center"><%= user.amount %></td>
+												<td align="center"><%= user.occupation %></td>
+												<td align="center" style="width: 60px;">
+													<div class="row" style="width: 100px;">
+													<div class="col-sm-6 text-left">
+														<a class="modal-with-form" href="#modalForm"><button type="button" onclick="getdata('/getuser','<%= user._id %>')" class="btn btn-warning btn-circle btn-sm"><i class="fa fa-pencil"></i></button></a>
+													</div>
+													<div class="col-sm-6 text-right">
+														<a  class="mb-xs mt-xs mr-xs modal-basic"  href="#modalDanger"><button type="button" onclick='delete_user("<%= user.first_name %> <%= user.last_name %>")' class="btn btn-danger btn-circle btn-sm text-right"><i class="fa fa-times-circle"></i></button></a>
+													</div>
+												</div>	
+												</td>
+											</tr>
+											<% } else { %>
+												<tr id="<%= user._id %>">
+													<td align="center"><b style="opacity: 0%;">aa</b><%= user.username %></td>
+													<td align="center"><%= user.first_name %> <%= user.last_name %></td>
+													<td align="center">N/A</td>
+													<td align="center">N/A</td>
+													<td align="center">N/A</td>
+													<td align="center"><%= user.occupation %></td>
+													<td align="center" style="width: 60px;">
+														<div class="" class="row" style="width: 100px;">
+														<div class="col-sm-12">
+															<a  class="mb-xs mt-xs mr-xs modal-basic"  href="#modalDanger"><button type="button" onclick='delete_user("<%= user.first_name %> <%= user.last_name %>")' class="btn btn-danger btn-circle btn-sm text-center"><i class="fa fa-times-circle"></i></button></a>
+														</div>
+													</div>	
+													</td>
+												</tr>
+										<% } %>
+										
+											   
+									  <% }); %>
+								</tbody>
+							</table>
+						</div>
+					</section>
+			</div>
+            <!-- Modal Form -->
+				<div id="modalForm" class="modal-block modal-block-primary mfp-hide">
+					<section class="panel">
+						<header class="panel-heading">
+							<h2 class="panel-title">Update User</h2>
+						</header>
+						<div class="panel-body">
+							<div class="form-group mt-lg">
+								<label class="col-sm-3 control-label">FIRST NAME</label>
+								<div class="col-sm-9">
+									<input type="text" id="first" name="first" onkeyup="verify()" class="form-control" placeholder="Enter first name here..." required/>
+								</div>
+							</div>
+							<div class="form-group mt-lg">
+								<label class="col-sm-3 control-label">LAST NAME</label>
+								<div class="col-sm-9">
+									<input type="text" id="last" name="last" onkeyup="verify()" class="form-control" placeholder="Enter last name here..." required/>
+								</div>
+							</div>
+								<div class="form-group mt-lg">
+									<label class="col-sm-3 control-label">MCODE</label>
+									<div class="col-sm-9">
+										<input type="text" id="m_code" name="m_code" onkeyup="verify()" class="form-control" placeholder="Enter m-code here..." required/>
+									</div>
+								</div>
+                                <div class="form-group mt-lg">
+									<label class="col-sm-3 control-label">NUMBER AGENT</label>
+									<div class="col-sm-9">
+										<input type="text" id="num_agent" name="number_agent" onkeyup="verify()" class="form-control" placeholder="Enter Number agent here..." required/>
+									</div>
+								</div>
+                                <div class="form-group mt-lg">
+									<label class="col-sm-3 control-label">Amount</label>
+									<div class="col-sm-9">
+										<input type="number" id="amount" name="amount" onkeyup="verify()" class="form-control" placeholder="Enter Amount here..." required/>
+									</div>
+								</div>
+								
+						</div>
+						<footer class="panel-footer">
+							<div class="row">
+								<div class="col-md-12 text-right">
+									<button id ="btnu" class="btn btn-primary modal-confirm" onclick="modify()">Update</button>
+									<button class="btn btn-default modal-dismiss">Cancel</button>
+								</div>
+							</div>
+						</footer>
+					</section>
+				</div>
+				<!-- Modal Form -->
+				<div id="modalForms" class="modal-block modal-block-primary mfp-hide">
+					<section class="panel">
+						<header class="panel-heading">
+							<h2 class="panel-title">Add new administrator</h2>
+						</header>
+						<div class="panel-body">
+								<div class="form-group mt-lg">
+									<label class="col-sm-3 control-label">Email</label>
+									<div class="col-sm-9">
+										<input type="email" id="email" name="email" onkeyup="check()" class="form-control" placeholder="Enter Email here..." required/>
+									</div>
+								</div>
+								<br>
+						</div>
+						<footer class="panel-footer">
+							<div class="row">
+								<div class="col-md-12 text-right">
+									<button id="admin" class="btn btn-primary modal-confirm" onclick="add_admin()">ADD</button>
+									<button class="btn btn-default modal-dismiss">Cancel</button>
+								</div>
+							</div>
+						</footer>
+					</section>
+				</div>
+                <div class="panel-body">
+
+                    <!-- Modal Primary -->
+
+                    <div id="modalDanger" class="modal-block modal-block-danger mfp-hide">
+                        <section class="panel">
+                            <header class="panel-heading">
+                                <h2 class="panel-title">Are you sure?</h2>
+                            </header>
+                            <div class="panel-body">
+                                <div class="modal-wrapper">
+                                    <div class="modal-icon">
+                                        <i class="fa fa-times-circle"></i>
+                                    </div>
+                                    <div class="modal-text">
+                                        <h4>User deletion</h4>
+                                        <p id="textwarn"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <footer class="panel-footer">
+                                <div class="row">
+                                    <div class="col-md-12 text-right">
+                                        <button class="btn btn-primary modal-confirm" onclick="confirm_del()">Confirm</button>
+                                        <button class="btn btn-default modal-dismiss">Cancel</button>
+                                    </div>
+                                </div>
+                            </footer>
+                        </section>
+                    </div>
+		</section>
+		<!-- Vendor -->
+		<script src="assets/vendor/jquery/jquery.js"></script>
+		<script src="assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js"></script>
+		<script src="assets/vendor/bootstrap/js/bootstrap.js"></script>
+		<script src="assets/vendor/nanoscroller/nanoscroller.js"></script>
+		<script src="assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+		<script src="assets/vendor/magnific-popup/magnific-popup.js"></script>
+		<script src="assets/vendor/jquery-placeholder/jquery.placeholder.js"></script>
+		
+		<!-- Specific Page Vendor -->
+		<script src="assets/vendor/select2/select2.js"></script>
+		<script src="assets/vendor/jquery-datatables/media/js/jquery.dataTables.js"></script>
+		<script src="assets/vendor/jquery-datatables/extras/TableTools/js/dataTables.tableTools.min.js"></script>
+		<script src="assets/vendor/jquery-datatables-bs3/assets/js/datatables.js"></script>
+		
+		<!-- Theme Base, Components and Settings -->
+		<script src="assets/javascripts/theme.js"></script>
+		
+		<!-- Theme Custom -->
+		<script src="assets/javascripts/theme.custom.js"></script>
+		
+		<!-- Theme Initialization Files -->
+		<script src="assets/javascripts/theme.init.js"></script>
+
+
+		<!-- Examples -->
+		<script src="assets/javascripts/tables/examples.datatables.default.js"></script>
+		<script src="assets/javascripts/tables/examples.datatables.row.with.details.js"></script>
+		<script src="assets/javascripts/tables/examples.datatables.tabletools.js"></script>
+		<script src="assets/my_js/validation.js"></script>
+		<script src="assets/javascripts/ui-elements/examples.modals.js"></script>
+        <script src="assets/javascripts/tables/examples.datatables.editable.js"></script>
+        <script src="assets/my_js/update_user.js"></script>
+		<script src="assets/my_js/addnewadministrator.js"></script>
+		<script>
+			
+			
+		</script>
+	</body>
+</html>
